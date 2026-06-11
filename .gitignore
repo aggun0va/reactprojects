@@ -1,0 +1,61 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.*
+
+# Build output
+dist/
+build/
+
+# Coverage
+coverage/
+
+# Logs
+logs/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Visual Studio
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# Runtime files
+*.pid
+*.pid.lock
+*.seed
+
+# Archives
+*.zip
+*.tar
+*.gz
+*.7z
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Certificates & keys
+*.pem
+*.key
+*.crt
+*.csr
+*.pfx
+*.p12
