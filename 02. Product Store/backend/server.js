@@ -1,11 +1,11 @@
 import express, { json } from 'express';
 import dotenv from 'dotenv';
+import cors from 'cors';
 
 import { connectDB } from './config/db.js';
 
 import productRoutes from './routes/product.route.js';
 
-// import cors from "cors";
 // import path from 'path';
 // import { fileURLToPath } from 'url';
 // const __filename = fileURLToPath(import.meta.url);
@@ -18,7 +18,13 @@ const port = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-// app.use(cors());
+
+const corsOptions = {
+  origin: 'http://localhost:5173', // frontend url here
+  optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions)); 
+
 // console.log(process.env.MONGO_URI);
 
 app.get('/', (req, res) => {
